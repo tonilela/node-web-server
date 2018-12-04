@@ -45,6 +45,14 @@ app.get('/about',(req,res)=>{
   })
 })
 
+app.get('/project',(req,res)=>{
+  res.render('project.hbs',{
+    pageTitle:'Project Page',
+    currentYear: new Date().getFullYear(),
+    welcome:`https://github.com/tonilela`
+  })
+})
+
 app.get('/bad',(req,res)=>{
   res.send({
     msg:'bad request',
